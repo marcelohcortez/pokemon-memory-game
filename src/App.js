@@ -35,7 +35,9 @@ function App() {
     setCards(newIsRevealed)//set again the cards with the new flipped status
   }
 
+  // eslint-disable-next-line no-unused-vars
   const generateCards = useEffect( () => {//generate the necessary cards for the game
+    // eslint-disable-next-line no-unused-vars
     let ignore = false//just to return a cleaning function
 
     async function fetchData() {
