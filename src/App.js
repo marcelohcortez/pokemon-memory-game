@@ -69,9 +69,6 @@ function App() {
   }, [])
 
   const startGame = () => {
-
-    generateCards()
-    
     let j = 0
 
     setGameStatus('on')
