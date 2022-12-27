@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect} from 'react'
 
 import './App.css';
 
@@ -69,6 +69,9 @@ function App() {
   }, [])
 
   const startGame = () => {
+
+    generateCards()
+    
     let j = 0
 
     setGameStatus('on')
@@ -91,7 +94,7 @@ function App() {
 
     flipCard(targetIndex)//flip up the clicked card
 
-    if (Object.keys(lastClicked).length != 0) {//if there is a lastCLicked item check if they match
+    if (Object.keys(lastClicked).length !== 0) {//if there is a lastCLicked item check if they match
       checkIfMatches(targetIndex)
     } else {
       setLastClicked({//set a lastClicked item
@@ -127,7 +130,7 @@ function App() {
               <div className={'cardBack' + (card.flipped === true ? ' flipped' : '')} onClick={() => clickedCard(card)} key={card.cardID}>
                 {(card.flipped === true ? 
                 <div className="cardInner">
-                  <img className="cardImage" src={card.image}/>
+                  <img className="cardImage" src={card.image} alt="Pokémon"/>
                   <p className="cardName">{card.name}</p>
                 </div>
                 : '')}
