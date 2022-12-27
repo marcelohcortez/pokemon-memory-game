@@ -136,3 +136,8 @@
     font-weight: 500;
   }
 }
+@media (max-width: 363px) {
+  .cardBack {
+    width: 25vw;
+  }
+}
